@@ -13,6 +13,8 @@
 
 *Let us [know](https://github.com/IvoVermeer/todomvc/issues) if you discover anything worth sharing.*
 
+## Usage
+Run npm -install to get started
 
 ## Implementation
 

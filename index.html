@@ -5,9 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Template • TodoMVC</title>
-	<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
-	<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
-	<!-- CSS overrides - remove if you don't need it -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -17,17 +16,13 @@
 			<h1>todos</h1>
 			<input id="new-todo" class="new-todo" placeholder="What needs to be done?" autofocus>
 		</header>
-		<!-- This section should be hidden by default and shown when there are todos -->
 		<section class="main" id="main">
 			<input class="toggle-all" type="checkbox" id="toggle-all">
 			<label for="toggle-all">Mark all as complete</label>
 			<ul class="todo-list" id="todo-list">
 		</section>
-		<!-- This footer should hidden by default and shown when there are todos -->
 		<footer class="footer" id="footer">
-			<!-- This should be `0 items left` by default -->
 			<span class="todo-count" id=todo-count></span>
-			<!-- Remove this if you don't implement routing -->
 			<ul class="filters">
 				<li>
 					<a href="#/">All</a>
@@ -39,20 +34,14 @@
 					<a href="#/completed">Completed</a>
 				</li>
 			</ul>
-			<!-- Hidden if no completed items are left ↓ -->
 			<button class="clear-completed" id="clearCompleted">Clear completed</button>
 		</footer>
 	</section>
 	<footer class="info">
 		<p>Double-click to edit a todo</p>
-		<!-- Remove the below line ↓ -->
-		<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
-		<!-- Change this out with your name and url ↓ -->
 		<p>Created by <a href="http://github.com/ivovermeer">Ivo Vermeer</a></p>
 		<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 	</footer>
-	<!-- Scripts here. Don't remove ↓ -->
-	<!-- <script src="node_modules/todomvc-common/base.js"></script> -->
 	<script src="js/helpers.js"></script>
 	<script src="js/app.js"></script>
 </body>

@@ -6,10 +6,7 @@
 ## Resources
 
 - [Website](http://www.watchandcode.com)
-- [Documentation](n/a)
-- [Used by](n/a)
-- [Blog](n/a)
-- [FAQ](n/a)
+- [The app](https://ivovermeer.github.io/todomvc/)
 
 *Let us [know](https://github.com/IvoVermeer/todomvc/issues) if you discover anything worth sharing.*
 

@@ -26,7 +26,7 @@ I wrote two helpers to get and create elements. The creEl(create element) takes 
 Side note: when I did this, I realized I was doing basically what jQuery is... a helper library. I read a blog somewhere last week which was basically a rant that developers choose to use libraries when not needed. Could have been written by Gordon:)
 
 ### router function
-I basically would like to know if the router setup is actually how it should be. I ran into an issue with the onscreen todos. They got cleared when I refreshed the page twice. That why I added an 'window.onload' event listener(line 59). 
+I basically would like to know if the router setup is actually how it should be. I ran into an issue with the onscreen todos. They got cleared when I refreshed the page twice. That's why I added an 'window.onload' event listener(line 59). 
 
 ### UUID generator
 The uuid now generates a random string but it's just numbers. I'd like to know how to (randomly) throw some letters in there. Probably using the map() function(strings are just arrays, right?)

@@ -191,13 +191,13 @@ var app = {
 		}
 	},
 	toggleAll: function(event) {
-		var totalTodos = this.todos.length;
+		var totalTodos = this.getFilteredTodos().length;
 		var completedTodos = 0;
-		this.todos.forEach(function(todo) {
+		this.getFilteredTodos().forEach(function(todo) {
 			if (todo.completed) completedTodos++;
 		});
 
-		this.todos.forEach(function(todo) {
+		this.getFilteredTodos().forEach(function(todo) {
 			if (totalTodos === completedTodos) {
 				todo.completed = !todo.completed;
 			} else {

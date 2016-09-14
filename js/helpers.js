@@ -1,19 +1,27 @@
-function getEl( el ) {
+/* exported getElement createElement */
+/**
+ * Retrieves an element from the DOM by ID
+ * @param  {string} el HTML element ID
+ * @return {object}    DOM element object
+ */
+function getElement ( el ) {
 	return document.getElementById( el );
 }
 
-function crEl( element, object ) {
-	var objectProto = {
-		className: 'className',
-		type: 'type',
-		innerHTML: 'innerHTML'
-	};
+/**
+ * Creates DOM elements
+ * @param  {string} element 	HTML element
+ * @param  {object} attributes 	Objects containg attribute:value pairs
+ * @return {object} 			The created DOM element
+ */
+function createElement ( element, attributes ) {
 	var newElement = document.createElement( element );
 	if ( arguments.length > 1 ) {
-		if ( object.hasOwnProperty( 'className' ) ) newElement.className = object.className;
-		if ( object.hasOwnProperty( 'type' ) ) newElement.type = object.type;
-		if ( object.hasOwnProperty( 'innerHTML' ) ) newElement.innerHTML = object.innerHTML;
-		if ( object.hasOwnProperty( 'value' ) ) newElement.value = object.value;
+		var attributeArray = Object.getOwnPropertyNames( attributes );
+		attributeArray.forEach(function (attribute) {
+			newElement[attribute] = this[attribute];
+		}, attributes);
+
 	}
 	return newElement;
 }

@@ -1,0 +1,17 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "browser": true,
+    },
+    "globals": {
+    	"getElement": false,
+    	"createElement": false
+    },
+    "rules": {
+	    "space-before-function-paren": [
+	     	"error",
+	     	"always"
+	     ]
+    }
+
+}

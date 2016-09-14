@@ -91,7 +91,7 @@ var app = {
 		return indexFound;
 	},
 	checkCompleted: function ( ) {
-		var totalTodos = this.todos.length;
+		var totalTodos = this.getFilteredTodos().length;
 		var completedTodos = 0;
 		var checkBox = getElement( 'toggle-all' );
 		this.todos.forEach( function ( todo ) {

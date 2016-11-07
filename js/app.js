@@ -23,20 +23,13 @@ var util = {
 		return text + 's';
 	},
 	uuid: function ( ) {
-		// pattern: aaaa-aaaa-aaaa-aaaa
-		// total of 19 characters
-		var uuid = '';
-		var uuidLength = 0;
-		do {
-			uuidLength++;
-			if ( uuidLength === 9 || uuidLength === 14 || uuidLength === 19 || uuidLength === 24 ) {
-				uuid += '-';
-			} else {
-				// generate random letters/numbers
-				var random = Math.min( 9, Math.round( Math.random( ) * 10 ) );
-				uuid += random;
-			}
-		} while ( uuidLength < 36 );
+		var d = new Date( ).getTime( );
+		var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace( /[xy]/g, function ( c ) {
+			var r = ( d + Math.random( ) * 16 ) % 16 | 0;
+			d = Math.floor( d / 16 );
+			return ( c == 'x' ? r : ( r & 0x3 | 0x8 ) ).toString( 16 );
+		} );
+
 		return uuid;
 	}
 };
@@ -91,7 +84,7 @@ var app = {
 		return indexFound;
 	},
 	checkCompleted: function ( ) {
-		var totalTodos = this.getFilteredTodos().length;
+		var totalTodos = this.getFilteredTodos( ).length;
 		var completedTodos = 0;
 		var checkBox = getElement( 'toggle-all' );
 		this.todos.forEach( function ( todo ) {
